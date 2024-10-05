@@ -1,16 +1,18 @@
-import { StyleSheet, Text, View , Div} from 'react-native'
+import { StyleSheet, Text, View, ImageBackground,} from 'react-native'
+import Formulario from './formulario'
 import React from 'react'
-import Btn from '../botones/boton';
 
 const PrimerComponente = () => {
   return (
     <>
+    <ImageBackground source={require('../assets/Fondo.jpg')}>
         <View style={styles.bg}>
             <Text style={styles.texto}>Crear Cuenta</Text>
             <Text style={styles.caja}>
-            <Btn texto = "Esto es un boton nuevo" presionado={() => navigation.navigate("SegundoComponente")}></Btn>
+                <Formulario></Formulario>
             </Text>
         </View>
+    </ImageBackground>
     </>
   )
 }
@@ -19,24 +21,23 @@ export default PrimerComponente
 
 const styles = StyleSheet.create({
     bg:{
-        backgroundColor: 'black',
-        alignItems:'Center'
+        height: 850
     },
     texto:{
         fontSize: 40,
         color:'white',
-        marginTop : 90
+        marginTop : 170,
+        textAlign: 'center'
     },
     caja:{
         backgroundColor: 'white',
-        marginTop : 30,
+        marginTop : 60,
         marginBottom: 30,
+        marginLeft: 30,
+        marginRight: 30,
         paddingTop: 30,
-        paddingHorizontal: 120,
-        paddingVertical: 200,
-        borderRadius: 10,
-    },
-    caja2:{
-
+        paddingVertical: 120,
+        borderRadius: 20,
+        borderWidth: 1
     }
 })
