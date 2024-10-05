@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import formulario from './componentes/formulario'
 import PrimerComponente from './componentes/PrimerComponente';
-import SegundoComponente from './componentes/SegundoComponente';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -11,7 +11,7 @@ export default function App() {
     <>
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="PrimerComponente" component={PrimerComponente}/>
+        <Stack.Screen name="PrimerComponente" component={PrimerComponente} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
 
