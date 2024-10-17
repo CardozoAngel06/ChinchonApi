@@ -1,17 +1,24 @@
-import { StyleSheet, Text, View, ImageBackground,} from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity} from 'react-native'
 import Formulario from './formulario'
 import React from 'react'
+
 
 const PrimerComponente = () => {
   return (
     <>
     <ImageBackground source={require('../assets/Fondo.jpg')}>
         <View style={styles.bg}>
-            <Text style={styles.texto}>Crear Cuenta</Text>
-            <Text style={styles.caja}>
+            <Text style={styles.texto}>Iniciar Sesion</Text>
+            <Text >
                 <Formulario></Formulario>
+                <TouchableOpacity onPress={() => ('Crear cuenta')}>
+                <Text style={styles.texto}>
+                    ¿No tenés cuenta? <Text style={styles.link}>Crear una</Text>
+                </Text>
+            </TouchableOpacity>
+                
             </Text>
-        </View>
+        </View>    
     </ImageBackground>
     </>
   )
@@ -29,15 +36,4 @@ const styles = StyleSheet.create({
         marginTop : 170,
         textAlign: 'center'
     },
-    caja:{
-        backgroundColor: 'white',
-        marginTop : 60,
-        marginBottom: 30,
-        marginLeft: 30,
-        marginRight: 30,
-        paddingTop: 30,
-        paddingVertical: 120,
-        borderRadius: 20,
-        borderWidth: 1
-    }
-})
+      });
